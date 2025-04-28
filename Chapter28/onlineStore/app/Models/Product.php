@@ -19,6 +19,11 @@ class Product extends Model
      * $this->items - Item[] - contains the associated items
      */
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }     
+
     public static function validate($request)
     {
         $request->validate([
